@@ -1,0 +1,2 @@
+Letakkan foto kenangan di folder ini, lalu ubah src img di index.html.
+Letakkan video MP4 dengan nama special-video.mp4 agar muncul di bagian Our Special Video.

@@ -1,0 +1,1139 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#10030b" />
+    <title>Elwiska Admaja ♡</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Manrope:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --pink: #ff4e91;
+        --pink2: #ff8fba;
+        --wine: #170511;
+        --cream: #fff0f5;
+        --gold: #f4c8a1;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        background: #090208;
+        color: var(--cream);
+        font-family: Manrope, sans-serif;
+        overflow-x: hidden;
+      }
+      button {
+        font: inherit;
+      }
+      .serif {
+        font-family: "Cormorant Garamond", serif;
+      }
+      .script {
+        font-family: "Great Vibes", cursive;
+      }
+      #intro {
+        position: fixed;
+        inset: 0;
+        z-index: 20;
+        display: grid;
+        place-items: center;
+        background: radial-gradient(
+          ellipse at 50% 40%,
+          #461128 0,
+          #170511 42%,
+          #080207 100%
+        );
+        overflow: hidden;
+      }
+      .curtain {
+        position: absolute;
+        top: -5%;
+        height: 110%;
+        width: 53%;
+        z-index: 2;
+        background: repeating-linear-gradient(
+          90deg,
+          #25030e 0,
+          #4d0b20 7%,
+          #21030d 14%,
+          #5b1025 22%,
+          #1b020b 31%
+        );
+        box-shadow:
+          inset 0 0 45px #050105,
+          0 0 30px #000;
+        will-change: transform;
+      }
+      .curtain.left {
+        left: 0;
+        border-right: 3px solid #9c5a46;
+      }
+      .curtain.right {
+        right: 0;
+        border-left: 3px solid #9c5a46;
+      }
+      .stage-light {
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          ellipse at center,
+          #8e3b55 0,
+          transparent 48%
+        );
+        opacity: 0.35;
+      }
+      .intro-content {
+        position: relative;
+        z-index: 3;
+        text-align: center;
+        padding: 24px;
+        max-width: 650px;
+      }
+      .intro-content .eyebrow {
+        letter-spacing: 0.34em;
+        text-transform: uppercase;
+        color: #f0b7c9;
+        font-size: 0.66rem;
+      }
+      .intro-content h1 {
+        font:
+          clamp(3.4rem, 11vw, 7.5rem)/0.9 "Great Vibes",
+          cursive;
+        color: #f7d5a7;
+        text-shadow: 0 0 28px #ff7fa8;
+        margin: 24px 0;
+      }
+      .intro-content p {
+        color: #f8dce7;
+        letter-spacing: 0.08em;
+        font-size: 0.82rem;
+      }
+      .gold-line {
+        width: 90px;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, #eac18e, transparent);
+        margin: 22px auto;
+      }
+      .primary {
+        border: 1px solid #ff9cbe;
+        background: linear-gradient(110deg, #b91e59, #ff4e91);
+        color: white;
+        padding: 13px 28px;
+        border-radius: 40px;
+        box-shadow: 0 8px 28px #ed26734d;
+        cursor: pointer;
+        transition: 0.25s;
+      }
+      .primary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 34px #ed267377;
+      }
+      #intro .primary {
+        margin-top: 18px;
+      }
+      main {
+        opacity: 0;
+        visibility: hidden;
+      }
+      section {
+        position: relative;
+        min-height: 100svh;
+        padding: 90px 7vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        background: radial-gradient(
+          ellipse at 50% 20%,
+          #310b20 0,
+          #13040d 55%,
+          #080207 100%
+        );
+      }
+      section:nth-child(even) {
+        background: radial-gradient(
+          ellipse at 50% 0,
+          #3a1028 0,
+          #12040d 58%,
+          #080207 100%
+        );
+      }
+      .section-inner {
+        width: min(1100px, 100%);
+        margin: auto;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+      }
+      .kicker {
+        color: #ff8fba;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        font-size: 0.68rem;
+      }
+      h2 {
+        font:
+          500 clamp(2.6rem, 7vw, 5.2rem)/1 "Cormorant Garamond",
+          serif;
+        margin: 14px 0 18px;
+      }
+      h2 em {
+        font-family: "Great Vibes", cursive;
+        color: var(--pink);
+        font-style: normal;
+        font-size: 1.15em;
+      }
+      .sub {
+        color: #e5bdcc;
+        max-width: 560px;
+        margin: 0 auto 30px;
+        line-height: 1.8;
+        font-size: 0.9rem;
+      }
+      .heart {
+        color: #ff4e91;
+        text-shadow: 0 0 16px #ff4e91;
+      }
+      #home {
+        background: radial-gradient(
+          ellipse at 50% 30%,
+          #50132f 0,
+          #190713 50%,
+          #080207 100%
+        );
+      }
+      .hero-heart {
+        font-size: 3.4rem;
+        animation: heartbeat 1.8s infinite;
+        display: inline-block;
+      }
+      @keyframes heartbeat {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        10%,
+        30% {
+          transform: scale(1.14);
+        }
+        20%,
+        40% {
+          transform: scale(1);
+        }
+      }
+      .date {
+        letter-spacing: 0.22em;
+        color: #ffb4cd;
+        font-size: 0.75rem;
+      }
+      .hero-copy {
+        font:
+          italic 1.05rem "Cormorant Garamond",
+          serif;
+        color: #f4d9e3;
+        line-height: 1.8;
+        max-width: 560px;
+        margin: 25px auto;
+      }
+      .scroll-hint {
+        margin-top: 45px;
+        color: #d8aabb;
+        font-size: 0.7rem;
+        letter-spacing: 0.2em;
+      }
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px;
+        margin: 38px auto;
+        max-width: 1000px;
+      }
+      .memory {
+        background: #f5eee9;
+        color: #321827;
+        padding: 10px 10px 16px;
+        transform: rotate(var(--tilt));
+        box-shadow: 0 10px 30px #0008;
+        transition: transform 0.35s;
+      }
+      .memory:hover {
+        transform: rotate(0) translateY(-10px) scale(1.03);
+      }
+      .memory .photo {
+        height: auto;
+        background: transparent;
+        display: block;
+        overflow: hidden;
+      }
+      .memory img {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        object-fit: contain;
+      }
+      .memory p {
+        font:
+          italic 1rem "Cormorant Garamond",
+          serif;
+        margin: 9px 0 0;
+      }
+      .video-frame {
+        max-width: 760px;
+        margin: 30px auto 26px;
+        padding: 10px;
+        border: 1px solid #a84b70;
+        border-radius: 18px;
+        background: #160712;
+        box-shadow: 0 0 45px #ed267333;
+      }
+      .video-frame video,
+      iframe {
+        display: block;
+        width: 100%;
+        aspect-ratio: 16/9;
+        border: 0;
+        border-radius: 10px;
+        background: linear-gradient(140deg, #41152c, #080207);
+      }
+      .letter {
+        max-width: 720px;
+        margin: 30px auto;
+        padding: clamp(24px, 5vw, 52px);
+        border: 1px solid #9d496d;
+        border-radius: 18px;
+        background: linear-gradient(145deg, #2b0b1b, #10050d);
+        box-shadow: 0 0 55px #ed267322;
+        position: relative;
+      }
+      .letter:before,
+      .letter:after {
+        content: "♡";
+        position: absolute;
+        color: #f66a9c;
+        font-size: 2rem;
+      }
+      .letter:before {
+        top: 12px;
+        left: 18px;
+      }
+      .letter:after {
+        bottom: 12px;
+        right: 18px;
+      }
+      .letter p {
+        font:
+          italic 1.2rem/1.8 "Cormorant Garamond",
+          serif;
+        color: #f6dce5;
+      }
+      .signature {
+        font:
+          2.5rem "Great Vibes",
+          cursive;
+        color: #ff8fba;
+      }
+      .cake {
+        font-size: clamp(5rem, 15vw, 9rem);
+        filter: drop-shadow(0 0 25px #ff4e9188);
+        margin: 20px;
+      }
+      .final-note {
+        max-width: 540px;
+        margin: auto;
+        line-height: 1.8;
+        color: #f2d2df;
+      }
+      footer {
+        padding: 24px;
+        text-align: center;
+        background: #080207;
+        color: #b98da0;
+        font-size: 0.7rem;
+        letter-spacing: 0.12em;
+      }
+      .spark {
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: #ff91b8;
+        box-shadow: 0 0 12px #ff4e91;
+        pointer-events: none;
+      }
+      .float-heart {
+        position: absolute;
+        color: #ff4e91;
+        opacity: 0.24;
+        animation: floatUp linear infinite;
+        pointer-events: none;
+      }
+      @keyframes floatUp {
+        from {
+          transform: translateY(20vh) rotate(0);
+          opacity: 0;
+        }
+        15% {
+          opacity: 0.3;
+        }
+        to {
+          transform: translateY(-120vh) rotate(35deg);
+          opacity: 0;
+        }
+      }
+      .nav-dots {
+        position: fixed;
+        right: 18px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+        display: grid;
+        gap: 10px;
+      }
+      .nav-dots a {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: #85516a;
+        display: block;
+        transition: 0.25s;
+      }
+      .nav-dots a.active {
+        background: #ff72a6;
+        box-shadow: 0 0 12px #ff4e91;
+        transform: scale(1.5);
+      }
+      @media (max-width: 720px) {
+        section {
+          padding: 75px 6vw;
+          min-height: 92svh;
+        }
+        .cards {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 13px;
+        }
+        .memory .photo {
+          height: auto;
+        }
+        .nav-dots {
+          right: 9px;
+        }
+        .sub {
+          font-size: 0.82rem;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *:before,
+        *:after {
+          animation-duration: 0.01ms !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+      }
+
+      /* Flower bloom animation — section 3 */
+      .flower-garden {
+        height: 205px;
+        max-width: 560px;
+        margin: 12px auto 20px;
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        gap: clamp(24px, 8vw, 76px);
+        pointer-events: none;
+      }
+      .flower {
+        position: relative;
+        width: 88px;
+        height: 180px;
+        flex: 0 0 88px;
+        transform-origin: 50% 100%;
+      }
+      .flower .stem {
+        position: absolute;
+        bottom: 0;
+        left: calc(50% - 2px);
+        width: 4px;
+        height: 112px;
+        background: linear-gradient(#8dbb75, #315d3c);
+        border-radius: 10px;
+        transform: scaleY(0);
+        transform-origin: bottom;
+      }
+      .flower .leaf {
+        position: absolute;
+        bottom: 48px;
+        left: 50%;
+        width: 36px;
+        height: 18px;
+        background: linear-gradient(135deg, #a6d18b, #386d48);
+        border-radius: 100% 0 100% 0;
+        transform: scale(0);
+        transform-origin: left center;
+      }
+      .flower .leaf.right {
+        left: auto;
+        right: 50%;
+        transform-origin: right center;
+        border-radius: 0 100% 0 100%;
+      }
+      .flower .bloom {
+        position: absolute;
+        left: 50%;
+        bottom: 103px;
+        width: 88px;
+        height: 88px;
+        transform: translateX(-50%);
+        opacity: 1;
+      }
+      .flower .petal {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 25px;
+        height: 39px;
+        margin: 0;
+        border-radius: 55% 55% 48% 48%;
+        background: linear-gradient(
+          145deg,
+          #fff0f6 0%,
+          #ff91ba 48%,
+          #ed367d 100%
+        );
+        box-shadow: 0 0 14px #ff4e9166;
+        transform: translate(-50%, -50%);
+        transform-origin: 50% 90%;
+        opacity: 0;
+      }
+      .flower .center {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 17px;
+        height: 17px;
+        border-radius: 50%;
+        background: radial-gradient(circle at 35% 30%, #fff4b5, #e8a63f 70%);
+        transform: translate(-50%, -50%) scale(0);
+        box-shadow: 0 0 12px #ffd77a;
+      }
+      .flower:nth-of-type(3) .petal {
+        background: linear-gradient(145deg, #fff3fa, #e78bbd 75%);
+      }
+      .flower:nth-of-type(4) .petal {
+        background: linear-gradient(145deg, #fff0e7, #ff9b80 75%);
+      }
+      .flower-glow {
+        position: absolute;
+        bottom: 4px;
+        left: 50%;
+        width: 280px;
+        height: 38px;
+        transform: translateX(-50%);
+        background: radial-gradient(ellipse, #ff4e9140, transparent 70%);
+        filter: blur(8px);
+      }
+      .flower-caption {
+        font:
+          italic 1.15rem "Cormorant Garamond",
+          serif;
+        color: #f3c5d5;
+        margin: 0 auto 20px;
+      }
+      @media (max-width: 520px) {
+        .flower-garden {
+          height: 170px;
+          gap: 8px;
+        }
+        .flower {
+          transform: scale(0.78);
+          transform-origin: bottom center;
+          margin: 0 -8px;
+        }
+        .flower-caption {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- sound -->
+    <audio
+      id="backgroundMusic"
+      src="Taylor Swift - Long Live Lirik Terjemahan.mp3"
+      preload="auto"
+      loop
+      playsinline
+    ></audio>
+    <!-- sound -->
+
+    <div id="intro">
+      <div class="stage-light"></div>
+      <div class="curtain left"></div>
+      <div class="curtain right"></div>
+      <div class="intro-content">
+        <div class="eyebrow">
+          Sepotong Kejutan Sederhana, Dibuat Dengan Cinta♡
+        </div>
+        <div class="gold-line"></div>
+        <h1>UntukMu, <span id="introName">Elwiska</span></h1>
+        <p>
+          Malam ini, Aku & Semesta ikut merayakan dan mendoakan kehadiranMu.
+        </p>
+        <button class="primary" id="begin">
+          Bukalah Kejutan Kecil Dariku&nbsp; ♡
+        </button>
+        <div class="gold-line"></div>
+        <div
+          style="font: 1.25rem &quot;Cormorant Garamond&quot;; color: #e7bdc9"
+        >
+          Dengan segenap Cinta, Ridho
+        </div>
+      </div>
+    </div>
+
+    <main id="site">
+      <nav class="nav-dots" aria-label="Navigasi halaman">
+        <a href="#home" class="active" aria-label="Beranda"></a
+        ><a href="#memories" aria-label="Kenangan"></a
+        ><a href="#video" aria-label="Video"></a
+        ><a href="#letter" aria-label="Surat"></a
+        ><a href="#final" aria-label="Penutup"></a>
+      </nav>
+      <section id="home">
+        <div class="section-inner">
+          <div class="hero-heart heart">♡</div>
+          <div class="kicker">
+            Satu hari di Desember yang istimewa, yang tercipta untukMu.
+          </div>
+          <h2>
+            Happy Birthday,<br /><em id="heroName">Elwiska</em>
+            <span class="heart">♡</span>
+          </h2>
+          <div class="date">♥ &nbsp; 10 AUGUST &nbsp; ♥</div>
+          <p class="hero-copy">
+            Hari ini adalah tentang dirimu dan segala kebahagiaan yang selalu
+            kauhadirkan dalam hidupku, setiap harinya. Aku berharap hari
+            istimewamu seindah hatimu, setulus senyummu, dan sehangat kasih yang
+            selalu kau berikan.
+          </p>
+          <button
+            class="primary"
+            onclick="
+              document
+                .querySelector('#memories')
+                .scrollIntoView({ behavior: 'smooth' })
+            "
+          >
+            Unfold Love&nbsp; ♡
+          </button>
+          <div class="scroll-hint">
+            Turun sedikit lagi, ada bunga indah dan kejutan kecil untukmu.
+            &nbsp; ↓
+          </div>
+        </div>
+      </section>
+
+      <section id="memories">
+        <div class="section-inner">
+          <div class="kicker">
+            Kepingan Waktu yang Ingin Kusimpan Selamanya.
+          </div>
+          <h2>
+            Tentang Mu &<em>Kenangan yang berharga</em>
+            <span class="heart">♥</span>
+          </h2>
+          <p class="sub">
+            Setiap detik bersamamu menyimpan begitu banyak makna. Tak peduli
+            betapa sederhananya sebuah momen, selama ada dirimu di dalamnya,
+            semuanya menjadi kenangan yang ingin kujaga selamanya.
+          </p>
+          <div
+            class="flower-garden"
+            aria-label="Animasi bunga merah muda yang mekar"
+          >
+            <div class="flower-glow"></div>
+            <div class="flower">
+              <div class="stem"></div>
+              <div class="leaf"></div>
+              <div class="leaf right"></div>
+              <div class="bloom">
+                <i class="petal" style="--angle: 0deg"></i
+                ><i class="petal" style="--angle: 45deg"></i>
+                <i class="petal" style="--angle: 90deg"></i
+                ><i class="petal" style="--angle: 135deg"></i>
+                <i class="petal" style="--angle: 180deg"></i
+                ><i class="petal" style="--angle: 225deg"></i>
+                <i class="petal" style="--angle: 270deg"></i
+                ><i class="petal" style="--angle: 315deg"></i
+                ><i class="center"></i>
+              </div>
+            </div>
+            <div class="flower">
+              <div class="stem"></div>
+              <div class="leaf"></div>
+              <div class="leaf right"></div>
+              <div class="bloom">
+                <i class="petal" style="--angle: 0deg"></i
+                ><i class="petal" style="--angle: 45deg"></i>
+                <i class="petal" style="--angle: 90deg"></i
+                ><i class="petal" style="--angle: 135deg"></i>
+                <i class="petal" style="--angle: 180deg"></i
+                ><i class="petal" style="--angle: 225deg"></i>
+                <i class="petal" style="--angle: 270deg"></i
+                ><i class="petal" style="--angle: 315deg"></i
+                ><i class="center"></i>
+              </div>
+            </div>
+            <div class="flower">
+              <div class="stem"></div>
+              <div class="leaf"></div>
+              <div class="leaf right"></div>
+              <div class="bloom">
+                <i class="petal" style="--angle: 0deg"></i
+                ><i class="petal" style="--angle: 45deg"></i>
+                <i class="petal" style="--angle: 90deg"></i
+                ><i class="petal" style="--angle: 135deg"></i>
+                <i class="petal" style="--angle: 180deg"></i
+                ><i class="petal" style="--angle: 225deg"></i>
+                <i class="petal" style="--angle: 270deg"></i
+                ><i class="petal" style="--angle: 315deg"></i
+                ><i class="center"></i>
+              </div>
+            </div>
+          </div>
+          <p class="flower-caption">
+            Bunga-bunga mungkin akan berganti musim, tetapi cintaku padamu akan
+            selalu menemukan alasan untuk kembali bermekaran. ♥
+          </p>
+          <div class="cards">
+            <article class="memory" style="--tilt: -3deg">
+              <div class="photo">
+                <img
+                  src="assets/photos/photo-1.jpg"
+                  alt="Kenangan bersama 1"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p>Comel DiwajahMu</p>
+            </article>
+            <article class="memory" style="--tilt: 2deg">
+              <div class="photo">
+                <img
+                  src="assets/photos/photo-2.jpg"
+                  alt="Kenangan bersama 2"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p>Sang Putri diHatiku</p>
+            </article>
+            <article class="memory" style="--tilt: -2deg">
+              <div class="photo">
+                <img
+                  src="assets/photos/photo-3.jpg"
+                  alt="Kenangan bersama 3"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p>Bersama Selamanya</p>
+            </article>
+            <article class="memory" style="--tilt: 3deg">
+              <div class="photo">
+                <img
+                  src="assets/photos/photo-4.jpg"
+                  alt="Kenangan bersama 4"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p>Tempat TerindahKu ♥</p>
+            </article>
+          </div>
+          <button
+            class="primary"
+            onclick="
+              document
+                .querySelector('#video')
+                .scrollIntoView({ behavior: 'smooth' })
+            "
+          >
+            Putar kenangan bersama&nbsp; ◎
+          </button>
+        </div>
+      </section>
+
+      <section id="video">
+        <div class="section-inner">
+          <div class="kicker">Mengulang Detik yang Pernah Berarti.</div>
+          <h2>Sebuah Momen <em>Istimewa</em> ♥</h2>
+          <p class="sub">
+            Potongan kecil dari waktu yang pernah kita lalui, senyuman yang
+            pernah tercipta, dan kenangan indah yang selalu punya alasan untuk
+            diputar kembali.
+          </p>
+          <div class="video-frame">
+            <video id="memoryVideo" controls playsinline preload="metadata">
+              <source
+                src="my-little-princess-1080-ytshorts.savetube.me.mp4"
+                type="video/mp4"
+              />
+              Browser kamu tidak mendukung pemutaran video.
+            </video>
+          </div>
+          <button
+            class="primary"
+            onclick="
+              document
+                .querySelector('#letter')
+                .scrollIntoView({ behavior: 'smooth' })
+            "
+          >
+            Baca surat dariku&nbsp; ♡
+          </button>
+        </div>
+      </section>
+
+      <section id="letter">
+        <div class="section-inner">
+          <div class="kicker">Ungkapan Tulus dari Hatiku</div>
+          <h2>Sepucuk Surat Dariku <em>Ridho</em> ♥</h2>
+          <p class="sub">Kutulis dengan sepenuh Hatiku.</p>
+          <div class="letter">
+            <p>
+              Untuk seseorang ter paling luar biasa dalam hidupku,<br /><span
+                id="letterName"
+                >Elwiska ♥</span
+              >,
+            </p>
+            <p>
+              Aku mungkin tidak selalu pandai mengungkapkan perasaan, tetapi
+              percayalah, ada begitu banyak cinta yang kusimpan untukmu.
+            </p>
+            <p>
+              Kamu tidak perlu menjadi sempurna untuk menjadi seseorang yang
+              begitu istimewa di mataku. Aku menyukai segala hal tentang dirimu,
+              bahkan hal-hal kecil yang mungkin tidak pernah kamu sadari. Terima
+              kasih telah menjadi alasan di balik banyak senyum yang tercipta di
+              wajahku. Jika kebahagiaan memiliki sebuah nama, mungkin salah
+              satunya adalah namamu. Aku tidak membutuhkan seribu alasan untuk
+              menyayangimu, sebab kehadiranmu saja sudah cukup menjadi
+              alasannya.
+            </p>
+            <p>
+              Hadirmu menjadikan setiap hariku lebih indah dan penuh warna,
+              hanya dengan menjadi dirimu sendiri. Terima kasih atas segala
+              cinta, ketulusan, dan kebaikan hatimu, serta karena selalu menjadi
+              sumber kebahagiaan dalam hidupku.
+            </p>
+            <p class="signature">Happy Birthday, Wiska! ♥</p>
+            <p>Masih Mencintaimu,<br /><span class="signature">Ridho</span></p>
+          </div>
+          <button
+            class="primary"
+            onclick="
+              document
+                .querySelector('#final')
+                .scrollIntoView({ behavior: 'smooth' })
+            "
+          >
+            Satu Kejutan Terakhir&nbsp; ♡
+          </button>
+        </div>
+      </section>
+
+      <section id="final">
+        <div class="section-inner">
+          <div class="kicker">Satu Do'a, Dengan Berjuta Pelukan ♥</div>
+          <h2>
+            Happy Birthday,<br /><em id="finalName">Elwiska Admaja</em>
+            <span class="heart">♡</span>
+          </h2>
+          <div class="cake">🎂</div>
+          <p class="final-note">
+            Terima kasih telah hadir sebagai sumber kebahagiaanku, menjadi cinta
+            yang begitu berarti, dan melengkapi setiap bagian dalam hidupku.
+            Semoga segala doa dan harapan yang kamu panjatkan hari ini satu per
+            satu menjadi nyata. Aku akan selalu menDo'akan mu. Kamu selalu punya
+            tempat diHatiku, selamanya. ♥
+          </p>
+          <div class="gold-line"></div>
+          <div style="font: 2.3rem &quot;Great Vibes&quot;; color: #ff8fba">
+            Do'a ku, selalu menyertaimu
+          </div>
+          <button
+            class="primary"
+            style="margin-top: 24px"
+            onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+          >
+            Replay the Surprise ↺
+          </button>
+        </div>
+      </section>
+      <footer>DIBUAT OLEH RIDHO DENGAN SEPENUH CINTA&nbsp; ♥</footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script>
+      /* PERSONALISASI: ubah nama, tanggal, dan password di bagian ini. */
+      const CONFIG = {
+        recipient: "Elwiska",
+        sender: "Ridho",
+        birthday: "22 AUGUST",
+      };
+      document
+        .querySelectorAll("#introName,#heroName,#letterName,#finalName")
+        .forEach((el) => (el.textContent = CONFIG.recipient));
+      gsap.registerPlugin(ScrollTrigger);
+
+      // Bintang dan hati dekoratif
+      for (let i = 0; i < 42; i++) {
+        const s = document.createElement("i");
+        s.className = "spark";
+        s.style.left = Math.random() * 100 + "%";
+        s.style.top = Math.random() * 100 + "%";
+        s.style.opacity = 0.2 + Math.random() * 0.8;
+        s.style.transform = `scale(${0.4 + Math.random()})`;
+        document.body.appendChild(s);
+      }
+      for (let i = 0; i < 24; i++) {
+        const h = document.createElement("span");
+        h.className = "float-heart";
+        h.textContent = Math.random() > 0.5 ? "♥" : "♡";
+        h.style.left = Math.random() * 100 + "%";
+        h.style.bottom = -20 + Math.random() * 20 + "%";
+        h.style.fontSize = 12 + Math.random() * 24 + "px";
+        h.style.animationDuration = 9 + Math.random() * 13 + "s";
+        h.style.animationDelay = -Math.random() * 18 + "s";
+        document.body.appendChild(h);
+      }
+
+      gsap.set(".intro-content", { y: 25, opacity: 0 });
+      gsap.to(".intro-content", {
+        y: 0,
+        opacity: 1,
+        duration: 1.2,
+        ease: "power3.out",
+        delay: 0.3,
+      });
+      document.querySelector("#begin").addEventListener("click", () => {
+        // Memutar musik ketika tombol pembuka diklik
+        const music = document.getElementById("backgroundMusic");
+
+        music.volume = 0.6;
+
+        music.play().catch((error) => {
+          console.error("Musik gagal diputar:", error);
+        });
+        const tl = gsap.timeline({
+          onComplete: () => {
+            document.querySelector("#intro").style.display = "none";
+            const site = document.querySelector("#site");
+            site.style.visibility = "visible";
+            gsap.to(site, { opacity: 1, duration: 0.7 });
+            gsap.from("#home .section-inner > *", {
+              y: 35,
+              opacity: 0,
+              stagger: 0.12,
+              duration: 0.9,
+              ease: "power3.out",
+            });
+            ScrollTrigger.refresh();
+          },
+        });
+
+        document.querySelector("#begin").disabled = true;
+        tl.to(".intro-content", {
+          scale: 0.92,
+          opacity: 0,
+          duration: 0.45,
+          ease: "power2.in",
+        })
+          .to(
+            ".curtain.left",
+            { xPercent: -105, duration: 1.8, ease: "power4.inOut" },
+            0.15,
+          )
+          .to(
+            ".curtain.right",
+            { xPercent: 105, duration: 1.8, ease: "power4.inOut" },
+            0.15,
+          )
+          .to(".stage-light", { opacity: 0, duration: 1.1 }, 0.35);
+      });
+
+      // Reveal halus untuk tiap section saat masuk viewport
+      gsap.utils.toArray("section .section-inner").forEach((el) => {
+        gsap.from(el.children, {
+          y: 38,
+          opacity: 0,
+          stagger: 0.12,
+          duration: 1,
+          ease: "power3.out",
+          scrollTrigger: { trigger: el, start: "top 78%", once: true },
+        });
+      });
+      gsap.utils.toArray(".memory").forEach((card, i) => {
+        gsap.from(card, {
+          y: 55,
+          rotation: 0,
+          opacity: 0,
+          duration: 0.9,
+          delay: i * 0.12,
+          ease: "back.out(1.4)",
+          scrollTrigger: { trigger: ".cards", start: "top 82%", once: true },
+        });
+      });
+      gsap.to(".hero-heart", {
+        scale: 1.16,
+        duration: 1.1,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut",
+      });
+      // Animasi bunga mekar — dipicu saat taman bunga terlihat di layar.
+      const flowerTl = gsap.timeline({
+        scrollTrigger: {
+          trigger: "#memories",
+          start: "top 58%",
+          once: true,
+          invalidateOnRefresh: true,
+        },
+      });
+
+      // Pastikan semua bagian bunga mulai dari kondisi tertutup.
+      gsap.set("#memories .flower .stem", { scaleY: 0 });
+      gsap.set("#memories .flower .leaf", { scale: 0 });
+      gsap.set("#memories .flower .petal", {
+        scale: 0,
+        opacity: 0,
+        x: 0,
+        y: 0,
+        rotation: 0,
+      });
+      gsap.set("#memories .flower .center", { scale: 0 });
+
+      flowerTl
+        .to("#memories .flower .stem", {
+          scaleY: 1,
+          duration: 1.15,
+          stagger: 0.22,
+          ease: "power2.out",
+        })
+        .to(
+          "#memories .flower .leaf",
+          {
+            scale: 1,
+            duration: 0.65,
+            stagger: 0.09,
+            ease: "back.out(1.8)",
+          },
+          "-=0.45",
+        )
+        .to(
+          "#memories .flower .petal",
+          {
+            scale: 1,
+            opacity: 1,
+            y: (i, target) => -27,
+            rotation: (i, target) => {
+              const angle =
+                parseFloat(target.style.getPropertyValue("--angle")) || 0;
+              return angle;
+            },
+            duration: 0.9,
+            stagger: { each: 0.045, from: "center" },
+            ease: "elastic.out(1, 0.55)",
+          },
+          "-=0.1",
+        )
+        .to(
+          "#memories .flower .center",
+          {
+            scale: 1,
+            duration: 0.5,
+            stagger: 0.2,
+            ease: "back.out(2)",
+          },
+          "-=0.45",
+        )
+        .to(
+          "#memories .flower",
+          {
+            rotation: (i) => (i % 2 ? 3 : -3),
+            duration: 1.2,
+            yoyo: true,
+            repeat: 1,
+            transformOrigin: "50% 100%",
+            ease: "sine.inOut",
+            stagger: 0.12,
+          },
+          "-=0.15",
+        );
+
+      // Nav dots mengikuti section aktif
+      const sections = ["home", "memories", "video", "letter", "final"];
+      sections.forEach((id, i) =>
+        ScrollTrigger.create({
+          trigger: "#" + id,
+          start: "top center",
+          end: "bottom center",
+          onEnter: () => setDot(i),
+          onEnterBack: () => setDot(i),
+        }),
+      );
+      function setDot(i) {
+        document
+          .querySelectorAll(".nav-dots a")
+          .forEach((a, n) => a.classList.toggle("active", n === i));
+      }
+      // Kontrol backsound saat video diputar atau dijeda
+      const music = document.getElementById("backgroundMusic");
+      const memoryVideo = document.getElementById("memoryVideo");
+
+      // Simpan status backsound
+      let musicWasPlaying = false;
+
+      // Ketika video mulai diputar
+      memoryVideo.addEventListener("play", () => {
+        musicWasPlaying = !music.paused;
+
+        if (musicWasPlaying) {
+          music.pause();
+        }
+      });
+
+      // Ketika video dijeda
+      memoryVideo.addEventListener("pause", () => {
+        if (musicWasPlaying) {
+          music.play().catch((error) => {
+            console.error("Musik gagal dilanjutkan:", error);
+          });
+        }
+      });
+
+      // Ketika video selesai
+      memoryVideo.addEventListener("ended", () => {
+        if (musicWasPlaying) {
+          music.play().catch((error) => {
+            console.error("Musik gagal dilanjutkan:", error);
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
